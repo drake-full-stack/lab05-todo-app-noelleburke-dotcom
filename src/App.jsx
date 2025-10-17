@@ -27,7 +27,7 @@ function App() {
 
   const handleToggle = (indexToToggle) => {
     setTasks(
-      task.map((item, index) => 
+      tasks.map((task, index) => 
         index=== indexToToggle
           ?{ ...task,completed: !task.completed}
           :task
@@ -56,6 +56,11 @@ function App() {
       <ul className="task-list">
         {tasks.map((task, index) => (
           <li key={index} className="task-item">
+            <input 
+              type="checkbox" 
+              checked={task.completed}  // or false
+              onChange={() => { handleToggle(index) }}
+            />
             <span className="task-text">{task.text}</span>
             <button
               className="delete-button"
