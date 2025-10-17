@@ -30,6 +30,13 @@ h1 {
   border-color: #4a90e2;
 }
 
+.task-text.completed {
+  text-decoration: line-through;
+  color: #888;
+  opacity: 0.6;
+}
+
+
 .add-button {
   padding: 10px 20px;
   font-size: 16px;
